@@ -1,5 +1,5 @@
 /* Global */
-:root{
+:root {
     /* Color */
     --color-white: #ffffff;
     --color-light-white: #eeeeee;
@@ -12,7 +12,7 @@
     --color-blue: #73aace;
     --color-yellow: #fff7d1;
     --color-orange: #feb546;
-    --color-black: #000000;   
+    --color-black: #000000;
 
 
     /* Font size */
@@ -22,69 +22,79 @@
     --font-small: 16px;
     --font-micro: 14px;
 
-    
+
     /* Font weight */
     --weight-bold: 700;
     --weight-semi-bold: 600;
     --weight-regular: 400;
-    
+
     /* Size */
     --size-border-radius: 4px
-
 }
 
+/* Animation */
+--animation-duration: 300ms;
+
 /* Universal tags */
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     cursor: default;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--color-white);
 }
 
-ul{
+ul {
     list-style: none;
     padding-left: 0;
 }
 
-button{
+button {
     background-color: transparent;
     cursor: pointer;
     border: none;
     outline: none;
 }
 
+/* Section Common */
+.section {
+    padding: 50px;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
 
 /* Typography */
-h1{
+h1 {
     font-size: var(--font-large);
     font-weight: var(--weight-bold);
     color: var(--color-black);
     margin: 16px, 0px;
 }
 
-h2{
+h2 {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
     color: var(--color-black);
     margin: 8px, 0px;
 }
 
-h3{
+h3 {
     font-size: var(--font-regular);
     font-weight: var(--font-regular);
     color: var(--color-black);
     margin: 8px, 0px;
 }
 
-p{
+p {
     font-size: var(--font-regular);
     font-weight: var(--font-regular);
     color: var(--color-black);
@@ -92,7 +102,7 @@ p{
 }
 
 /* Navbar */
-#navbar{
+#navbar {
     display: flex;
     justify-content: space-between;
     background-color: var(--color-green);
@@ -101,65 +111,146 @@ p{
     padding: 16px;
 }
 
-.navbar__logo{
+.navbar__logo {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
     display: flex;
     align-items: center;
 }
 
-.navbar__logo a{
+.navbar__logo a {
     padding-left: 10px;
 }
 
-.navbar__menu{
+.navbar__menu {
     display: flex;
 }
 
-.navbar__menu__item{
+.navbar__menu__item {
     padding: 8px 12px;
     margin: 0 4px;
     cursor: pointer;
 }
 
-.navbar__menu__item.active{
+.navbar__menu__item.active {
     border: 1px solid var(--color-white);
     border-radius: var(--size-border-radius);
 }
 
-.navbar__menu__item:hover{
+.navbar__menu__item:hover {
     background-color: var(--color-gray-blue);
 }
 
 /* Home */
-#home{
+#home {
     background: url('imgs/background.png') center/cover no-repeat;
     padding: 50px;
     text-align: center;
 }
 
-.home__avatar{
-    width:25%;
-    height:25%;
+.home__avatar {
+    width: 25%;
+    height: 25%;
     border-radius: 50%;
     border: 2px solid var(--color-white);
 }
 
 .home__title,
-.home__description{
+.home__description {
     color: var(--color-light-white);
 }
 
-.home__contact{
+.home__contact {
     font-size: var(--font-regular);
     font-weight: var(--weight-bold);
     margin: 24px;
     padding: 8px 12px;
     border: 2px solid var(--color-white);
-    border-radius:  var(--size-border-radius);
+    border-radius: var(--size-border-radius);
     color: var(--color-white);
 }
 
-.home__contact:hover{
+.home__contact:hover {
     background-color: var(--color-green);
+}
+
+/* About */
+.about__major{
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+}
+
+.major__icon{
+    width: 170px;
+    height: 170px;
+    line-height: 170px;
+    font-size: 100px;
+    margin: auto;
+    margin-bottom: 16px;
+    color: var(--color-blue);
+}
+
+.fa-js{
+    color: #f7df1e
+}
+.fa-swift{
+    color: #F05138;
+}
+.fa-node{
+    color: #3c873a;
+}
+
+.major__icon i {
+    transition: all 500ms ease;
+}
+.major__icon i:hover{
+    transform: scale(1.2);
+}
+.major__title, .major__description{
+    color: var(--color-dark-grey);
+}
+
+.major__title{
+    font-weight: var(--weight-bold);
+    font-size: var(--font-regular);
+}
+
+.major__description{
+    font-size: var(--font-small);
+}
+
+.jobs{
+    display: flex;
+    justify-content: start;
+}
+
+.kipf{
+    width: 100px;
+    height: 60px;
+    padding: 20px 30px 25px 0;
+}
+
+.gri{
+    width: 100px;
+    height: 65px;
+    padding: 15px 30px 25px 0;
+}
+
+.job__description{
+    margin: 0 16px;
+    text-align: left;
+}
+
+.job__name,
+.job__period{
+    color: var(--color-light-grey);
+}
+
+.job__name{
+    font-size: var(--font-small)
+}
+
+.job__period{
+    font-size: var(--font-micro);
 }
