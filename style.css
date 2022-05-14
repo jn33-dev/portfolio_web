@@ -163,6 +163,14 @@ p {
     text-align: center;
 }
 
+#home.home__avatar.home--transparent,
+#home.home__title.home--transparent,
+#home.home__description.home--transparent,
+#home.home__contact.home--transparent{
+    color: transparent;
+    transition: background-color var(--animation-duration) ease-in-out;
+}
+
 .home__avatar {
     width: 25%;
     height: 25%;
