@@ -13,7 +13,7 @@ document.addEventListener('scroll', () => {
     }
 });
 
-// Handel scrolling when tapping on the navbar menu
+// Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
     
@@ -22,6 +22,16 @@ navbarMenu.addEventListener('click', (event) => {
     if (link == null) {
         return;
     }
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({behavior: 'smooth', block: 'center'});
+    scrollIntoView(link);
 });
+
+// Handle scrolling when tapping on the contact me button
+const contactMeBtn = document.querySelector('.home__contact');
+contactMeBtn.addEventListener('click', () => {
+    scrollIntoView('#contact');
+});
+
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior: 'smooth', block: 'center'});
+}
