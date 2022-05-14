@@ -16,6 +16,9 @@
     --color-orange: #feb546;
     --color-black: #000000;
     --color-dark-blue: #1a4891;
+    --color-js: #f7df1e;
+    --color-swift: #F05138;
+    --color-node: #3c873a;
 
     /* Font size */
     --font-large: 48px;
@@ -163,14 +166,6 @@ p {
     text-align: center;
 }
 
-#home.home__avatar.home--transparent,
-#home.home__title.home--transparent,
-#home.home__description.home--transparent,
-#home.home__contact.home--transparent{
-    color: transparent;
-    transition: background-color var(--animation-duration) ease-in-out;
-}
-
 .home__avatar {
     width: 25%;
     height: 25%;
@@ -231,13 +226,13 @@ p {
 }
 
 .fa-js{
-    color: #f7df1e
+    color: var(--color-js)
 }
 .fa-swift{
-    color: #F05138;
+    color: var(--color-swift)
 }
 .fa-node{
-    color: #3c873a;
+    color: var(--color-node)
 }
 
 .major__icon i {
@@ -519,6 +514,27 @@ p {
     transform: scale(1.1);
     transition: all var(--animation-duration);
     color: var(--color-dark-blue);
+}
+
+/* Arrow up */
+.arrow-up{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    margin: auto;
+    margin-left: 900px;
+    color: var(--color-swift);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 300ms ease-in;
+}
+
+.arrow-up.visible{
+    opacity: 1;  
+    pointer-events: auto;
 }
 
 /* For below 768px screen width */
