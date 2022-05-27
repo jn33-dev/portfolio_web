@@ -217,16 +217,16 @@
         <h1>My work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
-          <button class="category__btn">
+          <button class="category__btn" data-filter="*">
             All<span class="category__count">3</span>
           </button>
-          <button class="category__btn">
+          <button class="category__btn" data-filter="static">
             Static(HTML/CSS)<span class="category__count">2</span>
           </button>
-          <button class="category__btn">
+          <button class="category__btn" data-filter="dynamic">
             Dynamic(JavaScript)<span class="category__count">1</span>
           </button>
-          <button class="category__btn">
+          <button class="category__btn" data-filter="react">
             React<span class="category__count">0</span>
           </button>
         </div>
@@ -236,6 +236,7 @@
             href="https://dev-jn-first-portfolio.netlify.app/"
             class="project"
             target="blank"
+            data-type="dynamic"
           >
             <img
               src="imgs/project_numbers-remove.png "
@@ -252,6 +253,7 @@
             href="https://portfolio4-hopper.yenachoi1.repl.co/"
             class="project"
             target="blank"
+            data-type="static"
           >
             <img
               src="imgs/project_hopper-remove.png "
@@ -268,6 +270,7 @@
             href="https://portfolio3-Louis-Vuitton.yenachoi1.repl.co"
             class="project"
             target="blank"
+            data-type="static"
           >
             <img
               src="imgs/project_LV-remove.png"
